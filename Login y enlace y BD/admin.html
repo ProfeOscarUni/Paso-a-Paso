@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Usuarios</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Administración de Usuarios</h2>
+        <form id="user-form" action="/add-user" method="POST">
+            <label for="cedula">Cédula</label>
+            <input type="text" id="cedula" name="cedula" required>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <label for="role">Rol</label>
+            <input type="text" id="role" name="role" required>
+            <button type="submit">Agregar Usuario</button>
+        </form>
+        <h2>Lista de Usuarios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody id="user-list">
+                <!-- Los datos de usuarios serán añadidos aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
